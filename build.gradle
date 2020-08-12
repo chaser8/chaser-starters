@@ -1,0 +1,60 @@
+buildscript {
+    ext {
+        dependenciesVersion = "D-1.0.0-SNAPSHOT"
+        commonsVersion = "C-1.0.0-SNAPSHOT"
+
+        dependencyManagementPluginVersion = "1.0.9.RELEASE"
+        springBootVersion = "2.2.9.RELEASE"
+
+        compileJava.options.encoding = "UTF-8"
+        compileTestJava.options.encoding = "UTF-8"
+    }
+    repositories {
+        mavenLocal()
+        maven {
+            url = uri("http://maven.aliyun.com/nexus/content/groups/public")
+        }
+        maven {
+            url = uri("https://repo.rdc.aliyun.com/repository/104345-release-2uXlFb/")
+        }
+        maven {
+            url = uri("https://repo.rdc.aliyun.com/repository/104345-snapshot-JR54du/")
+        }
+    }
+    dependencies {
+        classpath("io.spring.gradle:dependency-management-plugin:${dependencyManagementPluginVersion}")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+allprojects {
+    group = "top.chaser.framework"
+    version = "S-1.0.0-SNAPSHOT"
+}
+
+subprojects {
+    apply plugin: "io.spring.dependency-management"
+    dependencyManagement{
+        resolutionStrategy {
+            cacheChangingModulesFor 0, "seconds"
+        }
+        imports{
+            mavenBom "top.chaser.framework:base-dependencies:${dependenciesVersion}"
+        }
+    }
+    dependencies{
+        testCompile "org.junit.jupiter:junit-jupiter"
+        compile "cn.hutool:hutool-all"
+        compile "org.slf4j:slf4j-api"
+        annotationProcessor "org.projectlombok:lombok"
+        compileOnly "org.projectlombok:lombok"
+        compile "com.fasterxml.jackson.core:jackson-annotations"
+        compile "com.fasterxml.jackson.core:jackson-databind"
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    tasks.withType(JavaCompile) {
+        options.encoding = "UTF-8"
+    }
+}

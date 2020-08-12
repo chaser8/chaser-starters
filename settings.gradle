@@ -1,0 +1,4 @@
+rootProject.name = 'starters'
+include "spring-boot-starter"
+include 'spring-boot-starter-tk-mybatis'
+
