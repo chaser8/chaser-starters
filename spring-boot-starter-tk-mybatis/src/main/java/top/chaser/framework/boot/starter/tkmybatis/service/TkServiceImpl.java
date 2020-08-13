@@ -5,7 +5,7 @@ import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
 import tk.mybatis.mapper.entity.Example;
-import top.chaser.framework.boot.starter.tkmybatis.mapper.BaseMapper;
+import top.chaser.framework.boot.starter.tkmybatis.mapper.TkBaseMapper;
 
 import java.util.List;
 
@@ -14,7 +14,7 @@ import java.util.List;
  * @description:
  * @create: 2019-08-08 10:10
  **/
-public class ServiceImpl<T> implements IService<T> {
+public class TkServiceImpl<T> implements IService<T> {
 
     /**
      * 根据实体中的属性进行查询，只能有一个返回值，有多个结果是抛出异常，查询条件使用等号
@@ -245,5 +245,5 @@ public class ServiceImpl<T> implements IService<T> {
     }
 
     @Autowired
-    protected BaseMapper<T> mapper;
+    protected TkBaseMapper<T> mapper;
 }

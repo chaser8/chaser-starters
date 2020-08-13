@@ -4,23 +4,18 @@ import com.github.pagehelper.PageInfo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.junit.runner.RunWith;
-import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 import tk.mybatis.mapper.entity.Example;
-import top.chaser.framework.boot.starter.tkmybatis.entity.MallInfo;
+import top.chaser.framework.boot.starter.tkmybatis.model.MallInfo;
 import top.chaser.framework.common.base.util.JSONUtil;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 @Slf4j
-class ServiceImplTest {
+class TkServiceImplTest {
 
     @Autowired
-    MallInfoService mallInfoService;
+    MallInfoTkService mallInfoService;
 
     @BeforeAll
     public static void beforeAll() {

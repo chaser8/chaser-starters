@@ -1,4 +1,4 @@
-package top.chaser.framework.boot.starter.tkmybatis.entity;
+package top.chaser.framework.boot.starter.tkmybatis.model;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -16,7 +16,7 @@ import javax.persistence.Table;
 @Setter
 @ToString
 @Table(name = "MALL_INFO")
-public class MallInfo extends BaseEntity {
+public class MallInfo extends TkBaseEntity {
     private static final long serialVersionUID = 1L;
     /**
      * MALL_ID

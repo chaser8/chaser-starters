@@ -7,6 +7,6 @@ import tk.mybatis.mapper.common.Mapper;
  * @description:
  * @create: 2019-08-08 10:13
  **/
-public interface BaseMapper<T> extends Mapper<T> {
+public interface TkBaseMapper<T> extends Mapper<T> {
 
 }
