@@ -43,6 +43,11 @@ subprojects {
     }
     dependencies{
         testCompile "org.junit.jupiter:junit-jupiter"
+        testAnnotationProcessor "org.projectlombok:lombok"
+        testCompileOnly "org.projectlombok:lombok"
+        testCompile "org.springframework.boot:spring-boot-starter-test"
+        testCompile "com.h2database:h2"
+
         compile "cn.hutool:hutool-all"
         compile "org.slf4j:slf4j-api"
         annotationProcessor "org.projectlombok:lombok"

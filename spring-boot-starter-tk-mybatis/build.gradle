@@ -4,4 +4,5 @@ dependencies {
     compile "top.chaser.framework:common-base"
     compile "tk.mybatis:mapper-spring-boot-starter"
     compile "com.alibaba:druid-spring-boot-starter"
+    compile "com.github.pagehelper:pagehelper-spring-boot-starter"
 }

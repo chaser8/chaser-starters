@@ -1,7 +1,10 @@
 package top.chaser.framework.boot.starter.tkmybatis.service;
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.beans.factory.annotation.Autowired;
+import tk.mybatis.mapper.entity.Example;
 import top.chaser.framework.boot.starter.tkmybatis.mapper.BaseMapper;
 
 import java.util.List;
@@ -224,6 +227,23 @@ public class ServiceImpl<T> implements IService<T> {
     public List<T> selectByRowBounds(T record, RowBounds rowBounds) {
         return mapper.selectByRowBounds(record, rowBounds);
     }
+
+    @Override
+    public PageInfo<T> page(T record, int pageNo, int pageSize) {
+        PageHelper.startPage(pageNo, pageSize);
+        List<T> list = mapper.select(record);
+        PageInfo pageInfo = new PageInfo<>(list);
+        return pageInfo;
+    }
+
+    @Override
+    public PageInfo<T> page(Example example, int pageNo, int pageSize) {
+        PageHelper.startPage(pageNo, pageSize);
+        List<T> list = mapper.selectByExample(example);
+        PageInfo pageInfo = new PageInfo<>(list);
+        return pageInfo;
+    }
+
     @Autowired
     protected BaseMapper<T> mapper;
 }

@@ -1,6 +1,8 @@
 package top.chaser.framework.boot.starter.tkmybatis.service;
 
+import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.session.RowBounds;
+import tk.mybatis.mapper.entity.Example;
 
 import java.util.List;
 
@@ -10,6 +12,16 @@ import java.util.List;
  * @create: 2019-08-08 10:10
  **/
 public interface IService<T>{
+    /**
+     * 分页查询
+     *
+     * @param record
+     * @return
+     */
+    PageInfo<T> page(T record,int pageNo, int pageSize);
+
+    PageInfo<T> page(Example example, int pageNo, int pageSize);
+
     /**
      * 根据实体中的属性进行查询，只能有一个返回值，有多个结果是抛出异常，查询条件使用等号
      *
