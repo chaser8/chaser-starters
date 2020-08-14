@@ -3,7 +3,7 @@ buildscript {
         dependenciesVersion = "D-1.0.0-SNAPSHOT"
         commonsVersion = "C-1.0.0-SNAPSHOT"
 
-        dependencyManagementPluginVersion = "1.0.9.RELEASE"
+        dependencyManagementPluginVersion = "1.0.10.RELEASE"
         springBootVersion = "2.2.9.RELEASE"
 
         compileJava.options.encoding = "UTF-8"
@@ -50,6 +50,7 @@ subprojects {
 
         compile "cn.hutool:hutool-all"
         compile "org.slf4j:slf4j-api"
+        annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
         annotationProcessor "org.projectlombok:lombok"
         compileOnly "org.projectlombok:lombok"
         compile "com.fasterxml.jackson.core:jackson-annotations"
@@ -62,4 +63,8 @@ subprojects {
     tasks.withType(JavaCompile) {
         options.encoding = "UTF-8"
     }
+    compileJava{
+        inputs.files(processResources)
+    }
+
 }

@@ -3,5 +3,4 @@ dependencies {
     compile project(":spring-boot-starter-logging")
     compile "org.springframework.boot:spring-boot-starter"
     compile "top.chaser.framework:common-base"
-    compile "com.github.pagehelper:pagehelper-spring-boot-starter"
 }

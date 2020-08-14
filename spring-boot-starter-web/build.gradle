@@ -1,0 +1,6 @@
+version = "S-1.0.0-SNAPSHOT"
+dependencies {
+    compile project( ":spring-boot-starter")
+    compile "top.chaser.framework:common-web"
+    compile "org.springframework.boot:spring-boot-starter-web"
+}
