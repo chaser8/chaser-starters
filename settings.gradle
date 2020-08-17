@@ -1,5 +1,6 @@
 rootProject.name = 'starters'
 include 'spring-boot-starter-logging'
 include "spring-boot-starter"
-include 'spring-boot-starter-tk-mybatis'
+include 'spring-boot-starter-tkmybatis'
 include 'spring-boot-starter-web'
+include 'spring-boot-starter-swagger'
