@@ -33,24 +33,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class SwaggerAutoConfiguration {
     @Bean
     public Docket api() {
-//        Docket docket= new Docket(DocumentationType.SWAGGER_2)
-//                .select()
-//                .apis(RequestHandlerSelectors.any())
-//                .paths(PathSelectors.any())
-//                .build()
-//                .apiInfo(buildApiInf())
-//                .pathMapping("/")
-//                .directModelSubstitute(LocalDate.class, java.sql.Date.class)
-//                .directModelSubstitute(LocalDateTime.class, java.util.Date.class)
-//                .useDefaultResponseMessages(true)
-//                .globalResponseMessage(RequestMethod.GET,
-//                        CollUtil.newArrayList(new ResponseMessageBuilder()
-//                                .code(500)
-//                                .message("500 message")
-//                                .responseModel(new ModelRef("Error"))
-//                                .build()))
-//                .enableUrlTemplating(false);
-
         Docket docket =  new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(buildApiInfo())
                 .select()
