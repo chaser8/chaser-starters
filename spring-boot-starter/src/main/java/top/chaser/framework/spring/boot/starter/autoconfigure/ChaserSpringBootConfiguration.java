@@ -1,0 +1,13 @@
+package top.chaser.framework.spring.boot.starter.autoconfigure;
+
+import org.springframework.context.annotation.Configuration;
+
+/****
+ *
+ * @description:
+ * @author:
+ * @date 2020/8/14 5:31 下午
+ **/
+@Configuration
+public class ChaserSpringBootConfiguration {
+}

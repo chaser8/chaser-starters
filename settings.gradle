@@ -4,3 +4,11 @@ include "spring-boot-starter"
 include 'spring-boot-starter-tkmybatis'
 include 'spring-boot-starter-web'
 include 'spring-boot-starter-swagger'
+include 'spring-boot-starter-upload'
+include 'examples'
+include 'examples:spring-boot-starter-example'
+include 'examples:spring-boot-starter-tk-mybatis-example'
+include 'examples:spring-boot-starter-upload-example'
+include 'examples:spring-boot-starter-web-example'
+//findProject(':examples:test')?.name = 'test'
+

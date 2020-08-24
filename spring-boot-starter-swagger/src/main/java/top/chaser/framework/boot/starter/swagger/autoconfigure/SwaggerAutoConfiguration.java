@@ -38,7 +38,8 @@ public class SwaggerAutoConfiguration {
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
-                .build().useDefaultResponseMessages(false);//去掉多余的400，401，404，500等
+                .build()
+                .useDefaultResponseMessages(false);//去掉多余的400，401，404，500等
         return docket;
     }
 

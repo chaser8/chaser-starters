@@ -14,6 +14,6 @@ import org.springframework.context.annotation.Import;
 @ConditionalOnWebApplication
 @Configuration
 @EnableConfigurationProperties(SpringBootWebProperties.class)
-@Import({DefaultGlobalExceptionHandlerAdvice.class,ErrorPageConfig.class, top.chaser.framework.boot.starter.web.autoconfigure.DefaultGlobalExceptionHandlerAdvice.class})
+@Import({DefaultGlobalExceptionHandlerAdvice.class,ErrorPageConfig.class})
 public class SpringBootWebAutoConfiguration {
 }
