@@ -1,0 +1,9 @@
+dependencies {
+//    compile("org.springframework.boot:spring-boot-starter-security")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compileOnly("org.springframework.cloud:spring-cloud-loadbalancer")
+    compile("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery")
+    compile("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config")
+    compile project(":spring-cloud-starter-gateway")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}

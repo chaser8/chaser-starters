@@ -1,0 +1,35 @@
+chaser:
+  nacos:
+    server-addr: nacos.yangzb.com:18848
+    username: develop
+    password: $2a$10$ptWtT1bLFsHkw/NwYwMpIOnYZKhFj4QURVkq59wKGJfcz.wQhl8Li
+    namespace: test
+  swagger:
+    enable: true
+server:
+  port: 9005
+spring:
+  application:
+    name: nacos-provider-b
+  cloud:
+    nacos:
+      server-addr: ${chaser.nacos.server-addr}
+#      username: ${chaser.nacos.username}
+#      password: ${chaser.nacos.password}
+      namespace: ${chaser.nacos.namespace}
+      discovery:
+        group: test
+        metadata:
+          version: 1.0
+      config:
+        namespace: ${chaser.nacos.namespace}
+        extension-configs:
+          - data-id: test.yaml
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+logging:
+  level:
+    top.chaser: trace

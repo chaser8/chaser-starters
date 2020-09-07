@@ -1,0 +1,9 @@
+dependencies {
+    compileOnly("org.springframework.cloud:spring-cloud-starter-netflix-ribbon")
+    compileOnly("org.springframework.cloud:spring-cloud-loadbalancer")
+    compileOnly("org.springframework.cloud:spring-cloud-starter-gateway")
+    compileOnly("org.springframework:spring-web")
+    compileOnly("org.springframework:spring-webflux")
+    compileOnly("com.google.guava:guava")
+    compile("top.chaser.framework:common-base")
+}

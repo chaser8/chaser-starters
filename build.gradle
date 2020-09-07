@@ -33,15 +33,18 @@ allprojects {
 
 subprojects {
     apply plugin: "io.spring.dependency-management"
-    dependencyManagement{
+    apply plugin: 'org.springframework.boot'
+    dependencyManagement {
         resolutionStrategy {
             cacheChangingModulesFor 0, "seconds"
         }
-        imports{
+        imports {
             mavenBom "top.chaser.framework:base-dependencies:${dependenciesVersion}"
         }
     }
-    dependencies{
+    jar.enabled = true
+
+    dependencies {
         testCompile "org.junit.jupiter:junit-jupiter"
         testAnnotationProcessor "org.projectlombok:lombok"
         testCompileOnly "org.projectlombok:lombok"
@@ -52,6 +55,7 @@ subprojects {
         compile "org.slf4j:slf4j-api"
         annotationProcessor "org.springframework.boot:spring-boot-configuration-processor"
         annotationProcessor "org.projectlombok:lombok"
+        implementation 'org.springframework.boot:spring-boot-devtools'
         compileOnly "org.projectlombok:lombok"
         compile "com.fasterxml.jackson.core:jackson-annotations"
         compile "com.fasterxml.jackson.core:jackson-databind"

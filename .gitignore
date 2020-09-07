@@ -30,5 +30,6 @@ hs_err_pid*
 rebel.xml
 target/
 build/
+out/
 .gradle/
 .DS_Store

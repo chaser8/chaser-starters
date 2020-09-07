@@ -1,0 +1,9 @@
+dependencies {
+    compile project(":spring-boot-starter-web")
+    compile project(":spring-boot-starter-swagger")
+    compile("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery")
+    compile("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.cloud:spring-cloud-starter-openfeign")
+//    compile("org.springframework.cloud:spring-cloud-starter-loadbalancer")
+}
