@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-top.chaser.framework.boot.starter.web.autoconfigure.SpringBootWebAutoConfiguration

@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-top.chaser.framework.cloud.starter.gray.autoconfigure.GrayAutoConfiguration

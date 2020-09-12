@@ -1,5 +1,0 @@
-version = "S-1.0.0-SNAPSHOT"
-dependencies {
-    compile project(":spring-boot-starter-tkmybatis")
-    compile project(":spring-boot-starter-web")
-}

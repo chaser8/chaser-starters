@@ -1,0 +1,7 @@
+version = "S-1.0.0-SNAPSHOT"
+dependencies {
+    compile project(":chaser-boot-starter")
+    compile "tk.mybatis:mapper-spring-boot-starter"
+    compile "com.alibaba:druid-spring-boot-starter"
+    compile "com.github.pagehelper:pagehelper-spring-boot-starter"
+}

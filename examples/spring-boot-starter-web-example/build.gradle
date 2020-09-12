@@ -1,6 +1,0 @@
-dependencies {
-    compile "com.h2database:h2"
-    compile project(":spring-boot-starter-web")
-    compile project(":spring-boot-starter-swagger")
-    compile project(":spring-boot-starter-tkmybatis")
-}

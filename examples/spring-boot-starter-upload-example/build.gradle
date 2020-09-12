@@ -1,6 +1,0 @@
-dependencies {
-    compile project(":spring-boot-starter-upload")
-    compile project(":spring-boot-starter-swagger")
-    compile project(":spring-boot-starter-tkmybatis")
-    compile "mysql:mysql-connector-java"
-}
