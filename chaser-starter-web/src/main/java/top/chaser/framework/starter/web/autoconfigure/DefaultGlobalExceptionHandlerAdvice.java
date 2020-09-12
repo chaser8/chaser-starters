@@ -26,20 +26,17 @@ import top.chaser.framework.common.web.response.R;
 public class DefaultGlobalExceptionHandlerAdvice {
 
     @ExceptionHandler(value = {HttpRequestMethodNotSupportedException.class})
-//    @ResponseBody
     public R httpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException ex) {
         return R.fail(WebErrorType.PARAM_ERROR,ex.getLocalizedMessage());
     }
 
     @ExceptionHandler(value = {MissingServletRequestParameterException.class})
-//    @ResponseBody
     public R missingServletRequestParameterException(MissingServletRequestParameterException ex) {
         log.error("missing servlet request parameter exception:{}", ex.getMessage());
         return R.fail(WebErrorType.PARAM_ERROR);
     }
 
     @ExceptionHandler(value = {MultipartException.class})
-//    @ResponseBody
     public R uploadFileLimitException(MultipartException ex) {
         log.error("upload file size limit:{}", ex.getMessage());
         return R.fail(WebErrorType.UPLOAD_FILE_SIZE_LIMIT);
@@ -55,7 +52,7 @@ public class DefaultGlobalExceptionHandlerAdvice {
      * @author
      * @date 2019/4/10 08:55
      */
-//    @ResponseBody
+
     @ExceptionHandler(value = HttpMessageNotReadableException.class)
     public R errorHandler(HttpMessageNotReadableException ex) {
         log.error("", ex);
@@ -69,34 +66,28 @@ public class DefaultGlobalExceptionHandlerAdvice {
     }
 
     @ExceptionHandler(value = {MethodArgumentNotValidException.class})
-//    @ResponseBody
     public R serviceException(MethodArgumentNotValidException ex) {
         log.error("service exception:{}", ex.getMessage());
         return R.fail(WebErrorType.PARAM_ERROR, ex.getBindingResult().getFieldError().getDefaultMessage());
     }
-
     @ExceptionHandler(value = {DuplicateKeyException.class})
-//    @ResponseBody
     public R duplicateKeyException(DuplicateKeyException ex) {
         log.error("primary key duplication exception:{}", ex.getMessage());
         return R.fail(WebErrorType.DUPLICATE_PRIMARY_KEY);
     }
-
     @ExceptionHandler(value = {BusiException.class})
-//    @ResponseBody
     public R busiException(BusiException ex) {
         log.error("busi exception", ex);
         return R.fail(ex.getErrorType());
     }
 
     @ExceptionHandler(value = {SystemException.class})
-//    @ResponseBody
     public R systemException(SystemException ex) {
         log.error("system exception", ex);
         return R.fail(ex.getErrorType());
     }
 
-//    @ResponseBody
+
     @ExceptionHandler(value = {Exception.class, Throwable.class})
     public R exception(Throwable ex) {
         log.error("ResponseBody", ex);
