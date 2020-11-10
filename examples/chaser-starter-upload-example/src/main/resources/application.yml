@@ -3,9 +3,9 @@ spring:
     url: jdbc:mysql://rm-2zeiwub145qt7gw019o.mysql.rds.aliyuncs.com:3306/test?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&rewriteBatchedStatements=true
     username: yzb_test
     password: yzb_test
-    schema: classpath*:sql/${spring.datasource.platform}.sql
+#    schema: classpath*:sql/${spring.datasource.platform}.sql
     #    data: classpath:data/*.sql
-    initialization-mode: always
+#    initialization-mode: always
     platform: mysql
     druid:
       initial-size: 5

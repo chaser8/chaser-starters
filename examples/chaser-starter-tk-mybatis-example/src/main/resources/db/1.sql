@@ -1,4 +1,4 @@
-CREATE TABLE MALL_INFO (
+CREATE TABLE if not exists MALL_INFO (
      MALL_ID int(9) AUTO_INCREMENT,
      AGENT_ID varchar(20) ,
      MALL_TYPE varchar(10) ,

@@ -1,0 +1,5 @@
+dependencies {
+    compile project(":chaser-starter-web")
+    compile("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery")
+    compile("com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-config")
+}

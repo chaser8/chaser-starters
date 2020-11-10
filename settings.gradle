@@ -7,14 +7,20 @@ include 'chaser-starter-swagger'
 include 'chaser-starter-upload'
 include 'chaser-starter-gray'
 include 'chaser-starter-gateway'
+include 'chaser-starter-jwt'
 
 //include 'examples'
 //include 'examples:chaser-boot-starter-example'
 //include 'examples:chaser-starter-tk-mybatis-example'
-//include 'examples:chaser-starter-upload-example'
+include 'examples:chaser-starter-upload-example'
 //include 'examples:chaser-starter-web-example'
 //include 'examples:chaser-starter-gateway-example'
 //include 'examples:reactor-example'
-//
+
+
 //include 'examples:chaser-starter-gray-example'
 //include 'examples:chaser-starter-gray-example:gray-gateway-example'
+//include 'examples:chaser-starter-gray-example:gray-service-1'
+//include 'examples:chaser-starter-gray-example:gray-service-2'
+
+//include 'examples:chaser-security:chaser-starter-jwt-example'

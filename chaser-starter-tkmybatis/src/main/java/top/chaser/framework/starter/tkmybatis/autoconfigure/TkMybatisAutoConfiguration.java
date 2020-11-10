@@ -28,6 +28,7 @@ public class TkMybatisAutoConfiguration {
         return new BeanPostProcessor(){
             @Override
             public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+                log.info("{}-{}",bean,beanName);
                 if(bean instanceof MybatisProperties){
                     MybatisProperties mybatisProperties = (MybatisProperties)bean;
                     String[] originalMapperLocations = mybatisProperties.getMapperLocations();
