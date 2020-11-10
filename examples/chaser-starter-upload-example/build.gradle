@@ -1,6 +1,6 @@
 dependencies {
     compile project(":chaser-starter-upload")
-    compile project(":chaser-starter-swagger")
-    compile project(":chaser-starter-tkmybatis")
+//    compile project(":chaser-starter-swagger")
+//    compile project(":chaser-starter-tkmybatis")
     compile "mysql:mysql-connector-java"
 }
