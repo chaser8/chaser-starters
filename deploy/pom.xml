@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>deploy</artifactId>
+    <packaging>pom</packaging>
+    <parent>
+        <groupId>top.chaser.framework</groupId>
+        <artifactId>starters</artifactId>
+        <relativePath>../pom.xml</relativePath>
+        <version>S-1.0.0.RELEASE</version>
+    </parent>
+    <modules>
+        <module>../</module>
+        <module>../chaser-starter-logging</module>
+        <module>../chaser-boot-starter</module>
+        <module>../chaser-starter-web</module>
+        <module>../chaser-starter-webflux</module>
+
+        <module>../chaser-starter-swagger</module>
+        <module>../chaser-starter-tkmybatis</module>
+
+        <module>../chaser-starter-gateway</module>
+        <module>../chaser-starter-gray</module>
+        <module>../chaser-starter-jwt</module>
+
+        <module>../chaser-starter-upload</module>
+
+    </modules>
+</project>

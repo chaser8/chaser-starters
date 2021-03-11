@@ -1,6 +1,0 @@
-dependencies {
-    compile project(":chaser-boot-starter")
-    compile "top.chaser.framework:common-web"
-    compile "org.springframework.boot:spring-boot-starter-web"
-    implementation "org.springframework:spring-tx"
-}

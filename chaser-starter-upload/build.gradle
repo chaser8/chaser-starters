@@ -1,4 +1,0 @@
-dependencies {
-    compile project(":chaser-starter-tkmybatis")
-    compile project(":chaser-starter-web")
-}

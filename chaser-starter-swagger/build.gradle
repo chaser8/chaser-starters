@@ -1,5 +1,0 @@
-dependencies {
-    compile "com.github.xiaoymin:knife4j-spring-boot-starter"
-    compile "io.springfox:springfox-swagger2"
-    compile "org.springframework.boot:spring-boot-autoconfigure"
-}

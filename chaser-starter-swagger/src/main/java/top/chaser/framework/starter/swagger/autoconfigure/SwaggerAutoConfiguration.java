@@ -18,7 +18,6 @@ import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @program: dic-framework-v3
  * @description:
  * @author: yzb
  * @create: 2019-03-05 10:56
