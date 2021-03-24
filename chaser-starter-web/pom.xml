@@ -28,5 +28,9 @@
             <groupId>top.chaser.framework</groupId>
             <artifactId>chaser-boot-starter</artifactId>
         </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
     </dependencies>
 </project>
