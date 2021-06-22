@@ -3,17 +3,18 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
+        <artifactId>chaser-starter-uaa</artifactId>
         <groupId>top.chaser.framework</groupId>
-        <artifactId>starters</artifactId>
-        <relativePath>../pom.xml</relativePath>
         <version>S-1.0.0.RELEASE</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>chaser-starter-jwt</artifactId>
+
+    <artifactId>chaser-starter-uaa-resource-server</artifactId>
     <dependencies>
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
         <dependency>
             <groupId>top.chaser.framework</groupId>
@@ -21,23 +22,17 @@
         </dependency>
         <dependency>
             <groupId>top.chaser.framework</groupId>
-            <artifactId>chaser-starter-swagger</artifactId>
+            <artifactId>chaser-uaa-base</artifactId>
+            <version>${parent.version}</version>
         </dependency>
         <dependency>
-            <groupId>top.chaser.framework</groupId>
-            <artifactId>chaser-starter-tkmybatis</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-oauth2</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-jwt</artifactId>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 </project>

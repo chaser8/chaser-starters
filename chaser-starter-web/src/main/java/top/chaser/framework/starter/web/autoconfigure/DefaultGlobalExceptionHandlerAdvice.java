@@ -7,11 +7,12 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.core.annotation.Order;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.validation.FieldError;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
+import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.multipart.MultipartException;
 import top.chaser.framework.common.base.exception.BusiException;
 import top.chaser.framework.common.base.exception.SystemException;
@@ -22,7 +23,7 @@ import top.chaser.framework.common.web.response.R;
 @ConditionalOnClass(javax.servlet.Servlet.class)
 @ConditionalOnMissingBean(DefaultGlobalExceptionHandlerAdvice.class)
 @Order
-@RestControllerAdvice
+@ControllerAdvice
 public class DefaultGlobalExceptionHandlerAdvice {
 
     @ExceptionHandler(value = {HttpRequestMethodNotSupportedException.class})
@@ -43,14 +44,13 @@ public class DefaultGlobalExceptionHandlerAdvice {
     }
 
     /**
-     * errorHandler 前台传参json转换错误
+     *
+     * errorHandler
      *
      * @param ex
-     * @return com.fishingtime.dev1.common.base.api.Response
-     * @throws
-     * @Description:
+     * @return top.chaser.framework.common.web.response.R
      * @author
-     * @date 2019/4/10 08:55
+     * @date 2021/3/30 9:47 上午
      */
 
     @ExceptionHandler(value = HttpMessageNotReadableException.class)
@@ -68,7 +68,8 @@ public class DefaultGlobalExceptionHandlerAdvice {
     @ExceptionHandler(value = {MethodArgumentNotValidException.class})
     public R serviceException(MethodArgumentNotValidException ex) {
         log.error("service exception:{}", ex.getMessage());
-        return R.fail(WebErrorType.PARAM_ERROR, ex.getBindingResult().getFieldError().getDefaultMessage());
+        FieldError fieldError = ex.getBindingResult().getFieldError();
+        return R.fail(WebErrorType.PARAM_ERROR, fieldError.getField()+":"+fieldError.getDefaultMessage());
     }
     @ExceptionHandler(value = {DuplicateKeyException.class})
     public R duplicateKeyException(DuplicateKeyException ex) {
@@ -87,10 +88,10 @@ public class DefaultGlobalExceptionHandlerAdvice {
         return R.fail(ex.getErrorType());
     }
 
-
     @ExceptionHandler(value = {Exception.class, Throwable.class})
-    public R exception(Throwable ex) {
-        log.error("ResponseBody", ex);
+    public R exception(Throwable ex) throws Throwable {
+        //不处理ServletException异常，在BasicErrorController中处理
+        log.error("unknown exception", ex);
         return R.fail();
     }
 }

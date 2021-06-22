@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <groupId>top.chaser.framework</groupId>
-        <artifactId>starters</artifactId>
+        <artifactId>examples</artifactId>
         <relativePath>../pom.xml</relativePath>
         <version>S-1.0.0.RELEASE</version>
     </parent>

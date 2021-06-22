@@ -3,7 +3,7 @@
 
 ### 2. 引入依赖
 
-在使用 top.chaser.framework:spring-boot-starter和top.chaser.framework:spring-boot-starter-web会默认引入，如未使用前面2个包请单独引入com.tydic.dev1:spring-boot-starter-logging
+在使用 top.chaser.framework:spring-boot-starter和top.chaser.framework:spring-boot-starter-web会默认引入，如未使用前面2个包请单独引入top.chaser.framework:chaser-starter-logging
 ```xml
 <dependency>
     <groupId>top.chaser.framework</groupId>

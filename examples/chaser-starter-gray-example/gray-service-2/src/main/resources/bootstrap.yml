@@ -28,4 +28,3 @@ management:
 logging:
   level:
     root: info
-    com.tydic.dev1: trace

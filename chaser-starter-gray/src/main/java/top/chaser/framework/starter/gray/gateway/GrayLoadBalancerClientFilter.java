@@ -1,10 +1,11 @@
 package top.chaser.framework.starter.gray.gateway;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalancerProperties;
+import org.springframework.cloud.gateway.config.GatewayLoadBalancerProperties;
 import top.chaser.framework.common.base.util.JSONUtil;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.gateway.config.LoadBalancerProperties;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.cloud.gateway.support.DelegatingServiceInstance;
@@ -27,10 +28,10 @@ import java.net.URI;
 import java.util.List;
 import java.util.Map;
 /**
- * 
+ *
  * @program: 自定义全局过滤器，主要为了把灰度需要的参数参入到rule中
- * @description: 
- * @author: 
+ * @description:
+ * @author:
  * @date 2020/9/9 9:00 下午
  **/
 public class GrayLoadBalancerClientFilter implements GlobalFilter, Ordered {
@@ -41,12 +42,12 @@ public class GrayLoadBalancerClientFilter implements GlobalFilter, Ordered {
 
     protected final RibbonLoadBalancerClient loadBalancer;
 
-    private LoadBalancerProperties properties;
+    private GatewayLoadBalancerProperties properties;
     private final List<HttpMessageReader<?>> messageReaders;
 
 
     public GrayLoadBalancerClientFilter(RibbonLoadBalancerClient loadBalancer,
-                                        LoadBalancerProperties properties) {
+                                        GatewayLoadBalancerProperties properties) {
         this.loadBalancer = loadBalancer;
         this.properties = properties;
         this.messageReaders = HandlerStrategies.withDefaults().messageReaders();

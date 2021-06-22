@@ -24,9 +24,8 @@
 
         <module>../chaser-starter-gateway</module>
         <module>../chaser-starter-gray</module>
-        <module>../chaser-starter-jwt</module>
 
         <module>../chaser-starter-upload</module>
-
+        <module>../chaser-starter-uaa</module>
     </modules>
 </project>

@@ -56,6 +56,7 @@
         <module>chaser-starter-web-example</module>
         <module>chaser-starter-webflux-example</module>
         <module>reactor-example</module>
+        <module>chaser-starter-logging-example</module>
     </modules>
     <build>
         <resources>

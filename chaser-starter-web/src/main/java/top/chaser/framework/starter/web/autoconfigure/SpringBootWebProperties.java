@@ -15,8 +15,19 @@ public class SpringBootWebProperties {
     @Setter
     public class Sign {
         public static final String KEY = "sign";
-        private boolean enable = true;
+        private boolean enable = false;
         private String secretKey;
-        private String [] patterns;
+        private String [] patterns = {"/**"};
+        private String [] excludePatterns = {};
+    }
+
+    @NestedConfigurationProperty
+    private Log log = new Log();
+    @Getter
+    @Setter
+    public class Log {
+        private boolean enable = false;
+        private String [] patterns = {"/**"};
+        private String [] excludePatterns = {};
     }
 }
