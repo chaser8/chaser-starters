@@ -1,5 +1,0 @@
-dependencies {
-    compile project(":chaser-starter-logging")
-    compile "org.springframework.boot:spring-boot-starter"
-    compile "top.chaser.framework:common-base"
-}

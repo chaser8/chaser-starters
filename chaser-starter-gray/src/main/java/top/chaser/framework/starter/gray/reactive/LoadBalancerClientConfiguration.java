@@ -73,15 +73,15 @@ public class LoadBalancerClientConfiguration {
         @Bean
         @ConditionalOnBean(ReactiveDiscoveryClient.class)
         @ConditionalOnMissingBean
-        public ServiceInstanceSupplier discoveryClientServiceInstanceSupplier(
+        public ServiceInstanceListSupplier discoveryClientServiceInstanceSupplier(
                 ReactiveDiscoveryClient discoveryClient, Environment env,
                 ApplicationContext context) {
-            DiscoveryClientServiceInstanceSupplier delegate = new DiscoveryClientServiceInstanceSupplier(
+            DiscoveryClientServiceInstanceListSupplier delegate = new DiscoveryClientServiceInstanceListSupplier(
                     discoveryClient, env);
             ObjectProvider<LoadBalancerCacheManager> cacheManagerProvider = context
                     .getBeanProvider(LoadBalancerCacheManager.class);
             if (cacheManagerProvider.getIfAvailable() != null) {
-                return new CachingServiceInstanceSupplier(delegate,
+                return new CachingServiceInstanceListSupplier(delegate,
                         cacheManagerProvider.getIfAvailable());
             }
             return delegate;
@@ -130,15 +130,15 @@ public class LoadBalancerClientConfiguration {
         @Bean
         @ConditionalOnBean(DiscoveryClient.class)
         @ConditionalOnMissingBean
-        public ServiceInstanceSupplier discoveryClientServiceInstanceSupplier(
+        public ServiceInstanceListSupplier discoveryClientServiceInstanceSupplier(
                 DiscoveryClient discoveryClient, Environment env,
                 ApplicationContext context) {
-            DiscoveryClientServiceInstanceSupplier delegate = new DiscoveryClientServiceInstanceSupplier(
+            DiscoveryClientServiceInstanceListSupplier delegate = new DiscoveryClientServiceInstanceListSupplier(
                     discoveryClient, env);
             ObjectProvider<LoadBalancerCacheManager> cacheManagerProvider = context
                     .getBeanProvider(LoadBalancerCacheManager.class);
             if (cacheManagerProvider.getIfAvailable() != null) {
-                return new CachingServiceInstanceSupplier(delegate,
+                return new CachingServiceInstanceListSupplier(delegate,
                         cacheManagerProvider.getIfAvailable());
             }
             return delegate;

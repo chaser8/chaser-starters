@@ -9,7 +9,7 @@ spring:
     password: sa
     schema: classpath:db/*.sql
 #    data: classpath:data/*.sql
-    initialization-mode: always
+    initialization-mode: embedded
     platform: mysql
     druid:
       initial-size: 5

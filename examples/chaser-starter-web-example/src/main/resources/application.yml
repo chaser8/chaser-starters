@@ -79,6 +79,14 @@ pagehelper:
   supportMethodsArguments: true
   params: count=countSql
 chaser:
+  web:
+    sign:
+      enable: true
+      secret-key: 123
+      patterns:
+        - /mall/**
+    log:
+      enable: true
   swagger:
     enable: true
 server:

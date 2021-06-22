@@ -32,7 +32,7 @@ public class TkServiceImpl<T> implements IService<T> {
      * @param record
      * @return
      */
-    
+
     public List<T> select(T record) {
         return mapper.select(record);
     }
@@ -42,7 +42,7 @@ public class TkServiceImpl<T> implements IService<T> {
      *
      * @return
      */
-    
+
     public List<T> selectAll() {
         return mapper.selectAll();
     }
@@ -53,7 +53,7 @@ public class TkServiceImpl<T> implements IService<T> {
      * @param record
      * @return
      */
-    
+
     public int selectCount(T record) {
         return mapper.selectCount(record);
     }
@@ -64,7 +64,7 @@ public class TkServiceImpl<T> implements IService<T> {
      * @param key
      * @return
      */
-    
+
     public T selectByPrimaryKey(Object key) {
         return mapper.selectByPrimaryKey(key);
     }
@@ -75,7 +75,7 @@ public class TkServiceImpl<T> implements IService<T> {
      * @param key
      * @return
      */
-    
+
     public boolean existsWithPrimaryKey(Object key) {
         return mapper.existsWithPrimaryKey(key);
     }
@@ -86,18 +86,26 @@ public class TkServiceImpl<T> implements IService<T> {
      * @param record
      * @return
      */
-    
+
     public int insert(T record) {
         return mapper.insert(record);
     }
-
+    /**
+     * 保存一个实体集合，null的属性也会保存，不会使用数据库默认值
+     *
+     * @param record
+     * @return
+     */
+    public int insertList(List<? extends T> record) {
+        return mapper.insertList(record);
+    }
     /**
      * 保存一个实体，null的属性不会保存，会使用数据库默认值
      *
      * @param record
      * @return
      */
-    
+
     public int insertSelective(T record) {
         return mapper.insertSelective(record);
     }
@@ -108,7 +116,7 @@ public class TkServiceImpl<T> implements IService<T> {
      * @param record
      * @return
      */
-    
+
     public int updateByPrimaryKey(T record) {
         return mapper.updateByPrimaryKey(record);
     }
@@ -119,7 +127,7 @@ public class TkServiceImpl<T> implements IService<T> {
      * @param record
      * @return
      */
-    
+
     public int updateByPrimaryKeySelective(T record) {
         return mapper.updateByPrimaryKeySelective(record);
     }

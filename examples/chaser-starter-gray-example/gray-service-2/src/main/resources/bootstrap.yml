@@ -1,0 +1,30 @@
+chaser:
+  nacos:
+    server-addr: nacos.yangzb.com:18848
+    username: develop
+    password: $2a$10$ptWtT1bLFsHkw/NwYwMpIOnYZKhFj4QURVkq59wKGJfcz.wQhl8Li
+    namespace: test
+server:
+  port: 9103
+spring:
+  devtools:
+    restart:
+      enabled: false
+  application:
+    name: gray-service-2
+  cloud:
+    nacos:
+      server-addr: ${chaser.nacos.server-addr}
+      discovery:
+        group: test
+        namespace: ${chaser.nacos.namespace}
+        metadata:
+          version: 1.1
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+logging:
+  level:
+    root: info

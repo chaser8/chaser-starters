@@ -1,5 +1,6 @@
 package top.chaser.framework.starter.gray.autoconfigure;
 
+import org.springframework.cloud.gateway.config.GatewayLoadBalancerProperties;
 import top.chaser.framework.starter.gray.gateway.GrayLoadBalancerClientFilter;
 import top.chaser.framework.starter.gray.ribbon.RibbonSpringClientFactory;
 import lombok.extern.slf4j.Slf4j;
@@ -10,7 +11,6 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
-import org.springframework.cloud.gateway.config.LoadBalancerProperties;
 import org.springframework.cloud.netflix.ribbon.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -47,7 +47,7 @@ public class GrayAutoConfiguration {
             DispatcherHandler.class})
     @ConditionalOnMissingBean({GrayLoadBalancerClientFilter.class})
     @SuppressWarnings("all")
-    public GrayLoadBalancerClientFilter grayReactiveLoadBalancerClientFilter(RibbonLoadBalancerClient loadBalancerClient, LoadBalancerProperties properties) {
+    public GrayLoadBalancerClientFilter grayReactiveLoadBalancerClientFilter(RibbonLoadBalancerClient loadBalancerClient, GatewayLoadBalancerProperties properties) {
         return new GrayLoadBalancerClientFilter(loadBalancerClient, properties);
     }
 

@@ -1,4 +1,0 @@
-dependencies{
-    compile "com.h2database:h2"
-    compile project(":chaser-starter-tkmybatis")
-}

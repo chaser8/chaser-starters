@@ -17,10 +17,10 @@ import tk.mybatis.spring.annotation.MapperScan;
 @EnableConfigurationProperties(UploadProperties.class)
 @ConditionalOnProperty(name = "chaser.upload.enable", havingValue = "true")
 @ComponentScan(basePackages = {
-        "top.chaser.framework.boot.starter.upload.controller",
-        "top.chaser.framework.boot.starter.upload.service"
+        "top.chaser.framework.starter.upload.controller",
+        "top.chaser.framework.starter.upload.service"
 })
-@MapperScan("top.chaser.framework.boot.starter.upload.mapper")
+@MapperScan("top.chaser.framework.starter.upload.mapper")
 @Slf4j
 public class UploadAutoConfiguration {
 //    @Bean

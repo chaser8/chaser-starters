@@ -1,14 +1,14 @@
 chaser:
-#  gray:
-#    enable: true
-#    strategys:
-#      - service-name: nacos-provider-a
-#        version: 1.2
-#        percentage: 10
-#        conditions:
-#          - type: body
-#            name: user.name
-#            value: 123
+  gray:
+    enable: true
+    strategys:
+      - service-name: gray-service-1
+        version: 1.1
+        percentage: 10
+        conditions:
+          - type: body
+            name: user.name
+            value: 123
   nacos:
     server-addr: nacos.yangzb.com:80
     username: develop
@@ -56,14 +56,3 @@ spring:
                 lowerCaseServiceId: true   #是将请求路径上的服务名配置为小写（因为服务注册的时候，向注册中心注册时将服务名转成大写的了），比如以/service-hi/*的请求路径被路由转发到服务名为service-hi的服务上。
                 filters:
                   - StripPrefix=1
-#                  - RequestBody='user.name','yzb'
-#      routes:
-#        - id: nacos-provider
-#          uri: lb://nacos-provider
-#          predicates:
-##            - Path=/mall/**
-##            - Host=**
-#            - Body=user.name,yzb
-#          filters:
-
-#            - PrefixPath=/
