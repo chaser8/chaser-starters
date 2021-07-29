@@ -19,7 +19,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * @description:
- * @author: yzb
+ * @author: chaser8
  * @create: 2019-03-05 10:56
  **/
 @ConditionalOnWebApplication

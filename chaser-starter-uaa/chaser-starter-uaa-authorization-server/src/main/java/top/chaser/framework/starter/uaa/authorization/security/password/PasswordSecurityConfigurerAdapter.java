@@ -15,7 +15,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 /**
  * 用户名、密码认证
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/5/20 2:20 下午
  **/
 public class PasswordSecurityConfigurerAdapter extends SecurityConfigurerAdapter<DefaultSecurityFilterChain, HttpSecurity> {

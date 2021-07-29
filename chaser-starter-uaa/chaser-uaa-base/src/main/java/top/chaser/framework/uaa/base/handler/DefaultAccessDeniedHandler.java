@@ -13,7 +13,7 @@ import java.io.PrintWriter;
 
 /**
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/5/19 3:22 下午
  **/
 public class DefaultAccessDeniedHandler implements AccessDeniedHandler {

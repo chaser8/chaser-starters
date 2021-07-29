@@ -6,7 +6,7 @@ import top.chaser.framework.uaa.base.code.AuthCodeType;
 /**
  * 存储短信验证码
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/2 3:25 下午
  **/
 public interface ValidateCodeStore {

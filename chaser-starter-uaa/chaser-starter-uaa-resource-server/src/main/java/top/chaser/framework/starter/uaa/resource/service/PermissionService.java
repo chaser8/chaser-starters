@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 用户登录认证服务
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/5/20 9:40 上午
  **/
 public interface PermissionService {

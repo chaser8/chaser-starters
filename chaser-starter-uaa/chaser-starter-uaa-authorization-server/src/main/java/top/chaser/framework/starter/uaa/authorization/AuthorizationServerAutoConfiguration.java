@@ -16,7 +16,7 @@ import org.springframework.security.web.authentication.logout.LogoutHandler;
 import top.chaser.framework.common.base.exception.NotImplementedException;
 
 /**
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/5/19 10:33 上午
  **/
 @Configuration

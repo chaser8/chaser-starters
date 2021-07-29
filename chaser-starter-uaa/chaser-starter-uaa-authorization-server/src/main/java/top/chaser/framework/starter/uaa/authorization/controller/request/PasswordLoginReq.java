@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank;
 /**
  * 用户登录入参
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/5/19 5:50 下午
  **/
 @Getter

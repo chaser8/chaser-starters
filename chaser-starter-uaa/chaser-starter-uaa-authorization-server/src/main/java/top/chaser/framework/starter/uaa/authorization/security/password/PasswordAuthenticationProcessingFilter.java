@@ -3,6 +3,7 @@ package top.chaser.framework.starter.uaa.authorization.security.password;
 import cn.hutool.core.convert.Convert;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
+import top.chaser.framework.common.web.http.request.MultiReadHttpServletRequest;
 import top.chaser.framework.uaa.base.store.TokenStore;
 import top.chaser.framework.uaa.base.util.JwtUtil;
 import top.chaser.framework.starter.uaa.authorization.AuthorizationServerJwtProperties;
@@ -19,7 +20,6 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-import top.chaser.framework.common.web.request.MultiReadHttpServletRequest;
 import top.chaser.framework.common.web.session.User;
 
 import javax.servlet.FilterChain;
@@ -34,7 +34,7 @@ import java.util.Optional;
  * attemptAuthentication ：接收并解析用户凭证。
  * successfulAuthentication ：用户成功登录后，这个方法会被调用，我们在这个方法里生成token。
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/5/20 3:14 下午
  **/
 @Slf4j

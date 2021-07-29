@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/22 10:18 上午
  **/
 public class PasswordAuthenticationManager implements AuthenticationManager {

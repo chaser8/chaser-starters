@@ -13,7 +13,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 /**
  * 短信验证码登录相关配置
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/2 11:20 上午
  **/
 public class SmsCodeSecurityConfigurerAdapter extends SecurityConfigurerAdapter<DefaultSecurityFilterChain, HttpSecurity> {

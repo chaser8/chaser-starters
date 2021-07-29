@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 /**
  * 清除缓存的token信息
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/22 10:13 上午
  **/
 @Slf4j

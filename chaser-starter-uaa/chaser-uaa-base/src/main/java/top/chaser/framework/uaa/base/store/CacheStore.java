@@ -16,7 +16,7 @@ import java.util.Optional;
 /**
  * token缓存默认支持mq和redis
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/22 10:19 上午
  **/
 public class CacheStore implements TokenStore {

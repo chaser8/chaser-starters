@@ -13,7 +13,7 @@ import java.io.IOException;
 /**
  * 默认的退出成功处理器
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/21 3:24 下午
  **/
 public class DefaultLogoutSuccessHandler implements LogoutSuccessHandler {

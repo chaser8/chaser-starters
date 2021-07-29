@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * 验证码处理
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/3 11:12 上午
  **/
 public class ValidateCodeProcessorHolder implements InitializingBean {

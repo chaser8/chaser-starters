@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 集团组件缓存
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/2 3:25 下午
  **/
 public class CacheValidateCodeStore implements ValidateCodeStore {

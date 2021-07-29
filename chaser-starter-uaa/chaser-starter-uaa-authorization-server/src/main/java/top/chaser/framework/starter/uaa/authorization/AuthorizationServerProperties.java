@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplicat
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/5/20 11:43 上午
  **/
 @ConditionalOnWebApplication

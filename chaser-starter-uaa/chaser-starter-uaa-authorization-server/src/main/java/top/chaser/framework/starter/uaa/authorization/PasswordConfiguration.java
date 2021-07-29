@@ -12,7 +12,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.data.redis.core.RedisTemplate;
 
 /**
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/5/19 10:33 上午
  **/
 @Configuration

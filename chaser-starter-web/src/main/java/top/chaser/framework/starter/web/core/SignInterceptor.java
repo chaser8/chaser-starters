@@ -6,7 +6,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 import top.chaser.framework.common.base.util.JSONUtil;
 import top.chaser.framework.common.web.exception.WebErrorType;
-import top.chaser.framework.common.web.request.MultiReadHttpServletRequest;
+import top.chaser.framework.common.web.http.request.MultiReadHttpServletRequest;
 import top.chaser.framework.common.web.response.R;
 import top.chaser.framework.starter.web.autoconfigure.SpringBootWebProperties;
 

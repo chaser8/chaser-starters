@@ -17,7 +17,7 @@ import java.nio.charset.StandardCharsets;
 
 /**
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/5/19 2:47 下午
  **/
 public class DefaultAuthenticationEntryPoint implements AuthenticationEntryPoint, Serializable {

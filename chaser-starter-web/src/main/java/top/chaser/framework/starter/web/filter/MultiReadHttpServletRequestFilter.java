@@ -2,7 +2,7 @@ package top.chaser.framework.starter.web.filter;
 
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-import top.chaser.framework.common.web.request.MultiReadHttpServletRequest;
+import top.chaser.framework.common.web.http.request.MultiReadHttpServletRequest;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;

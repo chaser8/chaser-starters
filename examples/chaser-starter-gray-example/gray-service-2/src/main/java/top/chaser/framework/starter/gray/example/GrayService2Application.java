@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 /**
  * @program: bigdata-dev1
  * @description:
- * @author: yzb
+ * @author: chaser8
  * @create: 2019-03-22 14:10
  **/
 @SpringBootApplication

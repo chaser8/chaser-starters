@@ -11,7 +11,7 @@ import org.springframework.security.core.AuthenticationException;
 /**
  * 负责手机号认证
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/2 11:20 上午
  **/
 public class SmsCodeAuthenticationProvider implements AuthenticationProvider {

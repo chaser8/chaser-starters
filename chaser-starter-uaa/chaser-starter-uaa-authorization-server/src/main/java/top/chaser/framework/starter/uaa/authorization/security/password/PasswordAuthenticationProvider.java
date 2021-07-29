@@ -15,7 +15,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetailsChecker;
 
 /**
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/10 2:31 下午
  **/
 @Slf4j

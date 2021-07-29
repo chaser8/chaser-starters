@@ -7,7 +7,7 @@ import lombok.experimental.Accessors;
 /**
  * 发送短信验证码入参
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/5/19 5:50 下午
  **/
 @Getter

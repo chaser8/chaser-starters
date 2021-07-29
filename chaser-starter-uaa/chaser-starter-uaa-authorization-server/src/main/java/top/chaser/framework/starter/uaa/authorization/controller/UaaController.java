@@ -12,7 +12,7 @@ import top.chaser.framework.common.web.response.R;
 import top.chaser.framework.common.web.session.User;
 
 /**
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/1 3:06 下午
  **/
 @RequestMapping("/uaa")

@@ -7,7 +7,7 @@ import top.chaser.framework.common.web.session.User;
 /**
  * TokenStore接口
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/22 10:19 上午
  **/
 public interface TokenStore {

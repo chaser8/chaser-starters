@@ -16,7 +16,7 @@ import java.nio.charset.StandardCharsets;
 
 /**
  * 认证失败的默认处理器
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/5/20 3:45 下午
  **/
 public class DefaultAuthenticationFailureHandler extends SimpleUrlAuthenticationFailureHandler {

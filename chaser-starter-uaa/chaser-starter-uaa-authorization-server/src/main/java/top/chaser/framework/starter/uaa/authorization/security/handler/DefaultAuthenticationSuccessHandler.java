@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 /**
  * 认证成功的处理器
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/5/21 10:02 上午
  **/
 @Slf4j

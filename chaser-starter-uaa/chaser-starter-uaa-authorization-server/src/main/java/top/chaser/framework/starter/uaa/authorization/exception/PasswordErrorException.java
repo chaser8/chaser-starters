@@ -4,7 +4,7 @@ import org.springframework.security.authentication.BadCredentialsException;
 
 /**
  * 密码错误异常
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/22 10:17 上午
  **/
 public class PasswordErrorException extends BadCredentialsException {

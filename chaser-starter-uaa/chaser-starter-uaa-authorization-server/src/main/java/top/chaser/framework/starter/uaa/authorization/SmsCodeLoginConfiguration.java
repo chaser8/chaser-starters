@@ -11,7 +11,7 @@ import org.springframework.core.annotation.Order;
 
 /**
  * 短信登录相关配置
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/22 10:16 上午
  **/
 @Configuration

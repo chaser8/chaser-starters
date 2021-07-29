@@ -10,7 +10,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 /**
  * @program: dic-framework-v3
  * @description:
- * @author: yzb
+ * @author: chaser8
  * @create: 2019-03-05 10:56
  **/
 @ConditionalOnWebApplication

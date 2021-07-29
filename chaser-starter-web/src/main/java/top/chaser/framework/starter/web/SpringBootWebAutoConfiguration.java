@@ -1,5 +1,6 @@
 package top.chaser.framework.starter.web;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.ImportAutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication;
 import org.springframework.boot.autoconfigure.web.ResourceProperties;
@@ -21,9 +22,10 @@ import top.chaser.framework.starter.web.autoconfigure.SpringBootWebProperties;
  **/
 @ComponentScan(basePackages = {"top.chaser.framework"})
 @Configuration
-@EnableConfigurationProperties({ServerProperties.class, ResourceProperties.class, WebMvcProperties.class,SpringBootWebProperties.class})
+@EnableConfigurationProperties({ServerProperties.class,  WebMvcProperties.class,SpringBootWebProperties.class})
 @ImportAutoConfiguration({DefaultGlobalExceptionHandlerAdvice.class, ErrorPageConfig.class})
 @ConditionalOnWebApplication
 @ServletComponentScan
+@Slf4j
 public class SpringBootWebAutoConfiguration {
 }

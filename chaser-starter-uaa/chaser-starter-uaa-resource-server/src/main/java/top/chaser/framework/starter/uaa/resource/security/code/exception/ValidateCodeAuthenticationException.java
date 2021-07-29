@@ -5,7 +5,7 @@ import org.springframework.security.core.AuthenticationException;
 
 /**
  * 验证码校验不通过
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/3 3:04 下午
  **/
 public class ValidateCodeAuthenticationException extends AuthenticationException {

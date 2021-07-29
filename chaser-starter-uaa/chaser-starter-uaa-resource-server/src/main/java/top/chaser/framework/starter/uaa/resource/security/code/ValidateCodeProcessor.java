@@ -7,7 +7,7 @@ import lombok.Getter;
 /**
  * 验证码处理器
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/3 11:34 上午
  **/
 public abstract class ValidateCodeProcessor<T extends AuthCode> {

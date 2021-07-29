@@ -12,7 +12,7 @@ import org.springframework.security.web.authentication.logout.LogoutFilter;
 /**
  * 装配验证码过滤器
  *
- * @author: yangzb
+ * @author: chaser8
  * @date 2021/6/22 10:18 上午
  **/
 @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
