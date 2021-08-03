@@ -29,7 +29,7 @@ public class DefaultAuthenticationEntryPoint implements AuthenticationEntryPoint
                          AuthenticationException authException) throws IOException {
         //验证为未登陆状态会进入此方法，认证错误
         response.setStatus(HttpStatus.UNAUTHORIZED.value());
-        response.setContentType(MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE);
+        response.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
         response.setCharacterEncoding(StandardCharsets.UTF_8.name());
         PrintWriter printWriter = response.getWriter();
         String body = JSONUtil.toJSONString(R.fail(SystemErrorType.AUTH_ERROR, "please login"));

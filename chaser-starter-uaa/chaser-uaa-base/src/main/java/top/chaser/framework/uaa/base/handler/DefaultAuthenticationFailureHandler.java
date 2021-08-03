@@ -24,7 +24,7 @@ public class DefaultAuthenticationFailureHandler extends SimpleUrlAuthentication
     @Override
     public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response, AuthenticationException exception) throws IOException {
         response.setStatus(HttpStatus.UNAUTHORIZED.value());
-        response.setContentType(MediaType.APPLICATION_PROBLEM_JSON_UTF8_VALUE);
+        response.setContentType(MediaType.APPLICATION_JSON_UTF8_VALUE);
         response.setCharacterEncoding(StandardCharsets.UTF_8.name());
         PrintWriter printWriter = response.getWriter();
         String body = JSONUtil.toJSONString(R.fail(WebErrorType.AUTH_ERROR, exception.getMessage()));

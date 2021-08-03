@@ -17,7 +17,13 @@ public class SpringBootWebProperties {
         public static final String KEY = "sign";
         private boolean enable = false;
         private String secretKey;
+        /**
+         * 不需要加context-path
+         */
         private String [] patterns = {"/**"};
+        /**
+         * 不需要加context-path
+         */
         private String [] excludePatterns = {};
     }
 
@@ -27,7 +33,13 @@ public class SpringBootWebProperties {
     @Setter
     public class Log {
         private boolean enable = false;
+        /**
+         * 不需要加context-path
+         */
         private String [] patterns = {"/**"};
+        /**
+         * 不需要加context-path
+         */
         private String [] excludePatterns = {};
     }
 }
